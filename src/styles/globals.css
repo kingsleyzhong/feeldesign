@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.myBtn {
+  @apply cursor-pointer font-[Gilroy-Semibold]
+}
+
+.myInput {
+  @apply border-2 px-2 rounded-sm my-1
+}
+
+p{
+  @apply font-[Gilroy-Regular] !m-0
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply hidden
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply hidden
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply hidden
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply hidden
+}
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  /* Give your font a name */
+  src: url('../assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  /* Give your font a name */
+  src: url('../assets/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  /* Give your font a name */
+  src: url('../assets/fonts/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  /* Give your font a name */
+  src: url('../assets/fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  /* Give your font a name */
+  src: url('../assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-ExtraBoldItalic';
+  /* Give your font a name */
+  src: url('../assets/fonts/Gilroy-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-container {
+  @apply max-w-full mx-auto
+}
+
+.noto-sans{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* Example custom class for checked radio button */
+.checked-radio:checked {
+  fill: var(--primary-500, #9D5C0D);
+  stroke-width: 1px;
+  stroke: var(--primary-600, #76450A);
+  filter: drop-shadow(0px 0px 0px #FEDF89);
+}
