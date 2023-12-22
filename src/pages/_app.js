@@ -6,6 +6,7 @@ import { useCookies } from "react-cookie";
 import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
 import Head from "next/head";
+import Script from "next/script";
 
 export const MyContext = createContext();
 export default function App({ Component, pageProps }) {
