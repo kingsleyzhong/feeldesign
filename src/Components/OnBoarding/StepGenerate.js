@@ -234,8 +234,8 @@ function StepGenerate() {
     }
   };
   const redirectStep = (step) => {
-    localStorage.setItem("onBoardingStep", 2);
-    setOnBoardingStep(2);
+    localStorage.setItem("onBoardingStep", step);
+    setOnBoardingStep(step);
   };
   return (
     <div>
