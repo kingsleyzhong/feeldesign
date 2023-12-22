@@ -111,6 +111,8 @@ function StepGenerate() {
     });
   };
   const sendTextMsg = () => {
+    return;
+
     if (messageSent) return;
     setMessageSent(true);
 
@@ -206,7 +208,7 @@ function StepGenerate() {
               }
               if (checkRes.images) {
                 setGeneratedImages(checkRes.images);
-                sendImageMsg(checkRes.images, user.uid);
+                // sendImageMsg(checkRes.images, user.uid);
               }
               if (checkRes.progressImage) {
                 setProgressImage(checkRes.progressImage);

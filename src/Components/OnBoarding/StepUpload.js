@@ -248,7 +248,7 @@ function StepUpload() {
           </div>
         )}
 
-        {/* {!udata.user.email && <Signin />} */}
+        {/* {status != "authenticated" && <Signin />} */}
       </div>
     </div>
   );

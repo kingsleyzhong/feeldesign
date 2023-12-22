@@ -59,7 +59,7 @@ export default function App({ Component, pageProps }) {
   return (
     <MyContext.Provider value={value}>
       <Head>
-        <title>ai.ufoliving.co</title>
+        <title>FeelDesign</title>
         <meta
           name="description"
           content="ai ufoliving description"
