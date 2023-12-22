@@ -1,4 +1,4 @@
-import { v2 as cloudinary } from "cloudinary";
+ import { v2 as cloudinary } from "cloudinary";
 import cloudinaryConnect from "./cloudiniaryConnect";
 let streamifier = require("streamifier");
 const uploadImage = async (image, text) => {

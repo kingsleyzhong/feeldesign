@@ -33,10 +33,10 @@ function StepBudget() {
       <div className="w-full h-full md:h-auto ">
       <div className="h-full  md:h-full w-full  md:pt-[10%]  ">
         <h3 className="hidden md:block text-[#271703] text-[48px] text-center font-semibold noto-sans ">
-          输入您的预算
+          輸入您的預算
         </h3>
         <p className="hidden md:block text-[18px] text-[#9D5C0D] text-center noto-sans mb-[60px]">
-        输入您计划投资的金额
+        輸入您預計裝修的金額
         </p>
 
         <div className="md:hidden mb-[16px] w-full px-1 flex  gap-3 items-center py-[10px] bg-[#FEF7EF] justify-center">
@@ -44,18 +44,17 @@ function StepBudget() {
           <div className="">
             <h3 className=" text-[#271703] text-[16px] font-semibold noto-sans ">
               {" "}
-              输入您的预算
+              輸入您的預算
             </h3>
             <p className=" text-[12px] text-[#9D5C0D] noto-sans ">
-            输入您计划投资的金额
+            輸入您預計裝修的金額
             </p>
           </div>
         </div>
 
         <div className="rounded-[20px] flex flex-col items-center md:items-start px-4 md:px-8 pt-6 pb-5 md:pb-[64px] mt-3 bg-[#F7F8F9] mx-4 md:mx-7">
           <p className="mb-3  text-[14px] text-center px-2 md:text-left md:text-[16px] font-semibold noto-sans text-[#76450A] ">
-          选择房间类型或打造您自己的房间类型！ 从选项中选择，或输入
-             你独特的空间。
+            請輸入您最大裝修預算讓AI評估可行性
           </p>
 
           {/* .........  input field ........... */}
@@ -94,7 +93,7 @@ function StepBudget() {
               className="myBtn bg-[#9D5C0D] text-white flex rounded py-[12px] md:py-3 px-4 md:px-[28px] items-center justify-center space-x-[12px] w-[192px] cursor-pointer"
             >
               <p className="text-[17px] md:text-[20px] font-semibold noto-sans">
-              下一个
+              下一步
               </p>
              <Image className="" src={arrow} alt="" />
             </div>

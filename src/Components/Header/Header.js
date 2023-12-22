@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/logo.webp";
 import userIcon from "@/assets/images/onBoard/user-01.png";
-import downArrow from "@/assets/images/onBoard/downArrow.png";
+import downArrow from "@/assets/images/onBoard/downarrow.png";
 import { useRouter } from "next/router";
 import { MyContext } from "@/pages/_app";
 
@@ -21,7 +21,8 @@ const Header = () => {
     setOnBoardingStep(0);
     router.push("/");
   };
-    return <>
+  return (
+    <>
       <div className="hidden md:block border border-[#F1F5F9] bg-white w-full px-10 ">
         <div className=" custom-container px-8 xl:px-0  flex justify-between  ">
           <div className="left flex items-center space-x-[60px]">
@@ -34,12 +35,12 @@ const Header = () => {
             <div className="flex items-center space-x-[20px]">
               <Link href="/history" className="no-underline">
                 <h2 className="text-[16px] noto-sans font-semibold text-[#475569] cursor-pointer  ">
-                历史
+                  History
                 </h2>
               </Link>
               <Link href="/collection" className="no-underline">
                 <h2 className="text-[16px] noto-sans font-semibold text-[#475569] cursor-pointer  ">
-                收藏
+                  Collection
                 </h2>
               </Link>
             </div>
@@ -83,6 +84,7 @@ const Header = () => {
         </div>
       </div>
     </>
+  );
 };
 
 export default Header;

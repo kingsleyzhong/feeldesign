@@ -37,27 +37,27 @@ function StepWho() {
   };
   const iam = [
     {
-      title: "购房者",
+      title: "購屋者",
       img: home,
     },
     {
-      title: "房东",
+      title: "房東",
       img: land,
     },
     {
-      title: "租户",
+      title: "租客",
       img: business,
     },
     {
-      title: "业主",
+      title: "老闆",
       img: business,
     },
     {
-      title: "室内设计师",
+      title: "室内設計師",
       img: brush,
     },
     {
-      title: "房地产中介",
+      title: "房地產仲介",
       img: real,
     },
     {
@@ -82,7 +82,7 @@ function StepWho() {
           我是
           </h3>
           <p className=" hidden md:block text-[18px] text-[#9D5C0D] text-center mb-[30px] noto-sans">
-            告诉我们一些关于你自己的事。
+            讓AI們更了解您。
           </p>
 
           <div className=" md:hidden mb-[16px] w-full px-0 flex items-center gap-3  py-[10px] bg-[#FEF7EF] justify-center">
@@ -90,7 +90,7 @@ function StepWho() {
             <div className="">
               <h3 className=" text-[#271703] text-[16px]  noto-sans font-bold">我是</h3>
               <p className="  text-[12px] text-[#9D5C0D] noto-sans ">
-                告诉我们一些关于你自己的事。
+              讓AI們更了解您。
               </p>
             </div>
           </div>
@@ -159,7 +159,7 @@ function StepWho() {
           onClick={nextStep}
           className="myBtn bg-[#9D5C0D] text-white flex rounded py-[12px] md:py-3 px-4 md:px-[28px] items-center justify-center space-x-[12px] w-[192px] cursor-pointer"
         >
-          <p className="text-[17px] md:text-[20px] font-semibold noto-sans">下一个</p>
+          <p className="text-[17px] md:text-[20px] font-semibold noto-sans">下一步</p>
          <Image className="" src={arrow} alt="" />
         </div>
       </div>

@@ -11,8 +11,10 @@ import arrow from "../../assets/images/onBoard/ion_arrow-up.svg";
 import error from "../../assets/images/Featured icon outline.png";
 import leftarrow from "../../assets/images/arrow-left.png";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 function StepUpload() {
+  const { udata, status } = useSession();
   const { onBoardingStep, setOnBoardingStep, user } = useContext(MyContext);
   const [uploaded, setUploaded] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -92,14 +94,14 @@ function StepUpload() {
   return (
     <div className="h-[90vh] md:h-[86vh] ">
       <div className="h-full  md:h-auto ">
-        {user.email && (
+        {true && (
           <div className="w-full ">
-            <div className="">
+            <div className="py-4">
               <h3 className="hidden md:block text-[#271703] text-[30px] lg:text-[48px] text-center font-semibold noto-sans ">
-              选择并上传文件
+                Choose and upload file
               </h3>
               <p className="hidden md:block text-[18px] noto-sans text-[#9D5C0D] text-center">
-                上传您的房间图片
+                Upload your room image (not a floor plan)
               </p>
 
               {/* ......responsive heading.......... */}
@@ -109,10 +111,10 @@ function StepUpload() {
                 <div className="">
                   <h3 className=" text-[#271703] text-[16px] font-semibold noto-sans ">
                     {" "}
-                    选择并上传文件
+                    Choose and upload file
                   </h3>
                   <p className="  text-[12px] noto-sans text-[#9D5C0D] ">
-                    上传您的房间图片
+                    Upload your room image (not a floor plan)
                   </p>
                 </div>
               </div>
@@ -128,11 +130,12 @@ function StepUpload() {
                 <h2 className=" text-[12px] md:text-[14px] font-semibold noto-sans text-[#271703]">
                   <Link href="/" className="text-[#667412]">
                     {" "}
-                    上传鼓舞人心的图片是关键！ 🌟
+                    It doesn't matter if you don't have photos! 🌟
                   </Link>{" "}
-                  它指导我们的人工智能根据您的愿景量身定制设计，
-                   确保每个细节都能体现您的风格和偏好。
-                   每一个灵感都很重要！
+                  Our AI will produce different spaces of similar styles based
+                  on the style you selected above, allowing your space to fully
+                  display your individual style and echo your tastes and
+                  preferences!
                 </h2>
               </div>
 
@@ -159,9 +162,7 @@ function StepUpload() {
 
               <div className="px-10">
                 {selectedImage ? (
-                  <div
-                    className={`relative sm:w-[380px] w-full  mx-auto mt-5`}
-                  >
+                  <div className={`relative sm:w-[380px] w-full  mx-auto mt-5`}>
                     {!uploaded && (
                       <div className="absolute w-full  h-full bg-[#9D5C0D] opacity-80"></div>
                     )}
@@ -202,11 +203,11 @@ function StepUpload() {
                         </div>
 
                         <h2 className="text-[20px] text-[#333A09] leading-6 md:leading-9 mb-3 text-center md:text-[33px] font-semibold noto-sans">
-                        上传励志 <br /> 图像
+                          Upload Inspirational Image
                         </h2>
                         <p className="text-center mt-2 text-[#333A09] text-[14px] md:text-[16px] noto-sans">
-                        请以PNG或JPG格式上传。
-                          <br /> 最大文件大小：10MB
+                          Please upload in PNG or JPG format. <br /> Maximum
+                          file size: 10MB.
                         </p>
                       </div>
                     </label>
@@ -223,7 +224,7 @@ function StepUpload() {
                   className="myBtn hidden  text-[#9D5C0D] border border-[#9D5C0D] md:flex rounded py-[9px] px-4 md:px-[28px] items-center justify-center space-x-[12px] w-[192px] cursor-pointer"
                 >
                   <p className="text-[17px] md:text-[20px] font-semibold noto-sans">
-                  跳过
+                    Skip
                   </p>
                 </div>
                 <div className="myBtn md:hidden" onClick={prevStep}>
@@ -238,7 +239,7 @@ function StepUpload() {
                   className="myBtn bg-[#9D5C0D] text-white flex rounded py-[10px] px-4 md:px-[28px] items-center justify-center space-x-[12px] w-[192px] cursor-pointer"
                 >
                   <p className="text-[17px] md:text-[20px] font-semibold noto-sans">
-                  下一个
+                    Next
                   </p>
                   <Image className="" src={arrow} alt="" />
                 </div>
@@ -247,7 +248,7 @@ function StepUpload() {
           </div>
         )}
 
-        {!user.email && <Signin />}
+        {/* {!udata.user.email && <Signin />} */}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import arrow from "../../assets/images/onBoard/ion_arrow-up.svg";
 import Image from "next/image";
 import step from "../../assets/images/_Step icon base.png";
 import leftarrow from "../../assets/images/arrow-left.png";
-import axios from 'axios'
+import axios from "axios";
 
 function StepType() {
   const inputRef = useRef("input");
@@ -23,10 +23,7 @@ function StepType() {
     }
   };
 
-  
-
-  const nextStep = async() => {
-    
+  const nextStep = async () => {
     if (onBoard.type) {
       localStorage.setItem("onBoardingStep", onBoardingStep + 1);
       setOnBoardingStep(onBoardingStep + 1);
@@ -34,128 +31,94 @@ function StepType() {
   };
   const types = [
     {
-      name: "浴室",
-      img: "https://i.ibb.co/5KKcJF6/american-style.webp",
+      name: "Living Room",
     },
     {
-      name: "饭厅",
-      img: "https://i.ibb.co/YRrwd0L/installation-art.webp",
+      name: "Bedroom",
     },
     {
-      name: "卧室",
-      img: "https://i.ibb.co/19FMCxv/modern-style.webp",
+      name: "Kitchen",
     },
     {
-      name: "服装店",
-      img: "https://i.ibb.co/WyR75BL/minimalist-style.webp",
+      name: "Bathroom",
     },
     {
-      name: "办公室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Dining Room",
     },
     {
-      name: "在家办公",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Home Office",
     },
     {
-      name: "苗圃",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Nursery",
     },
     {
-      name: "图书馆",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Library",
     },
     {
-      name: "工作室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Studio",
     },
     {
-      name: "阁楼",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Loft",
     },
     {
-      name: "门厅",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Foyer",
     },
     {
-      name: "泥房",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Mudroom",
     },
     {
-      name: "洗衣房",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Laundry Room",
     },
     {
-      name: "地下室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Basement",
     },
     {
-      name: "家庭电影院",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Home Theater",
     },
     {
-      name: "游戏厅",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Game Room",
     },
     {
-      name: "客房",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Guest Room",
     },
     {
-      name: "步入式衣柜",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Walk-in Closet",
     },
     {
-      name: "温室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Conservatory",
     },
     {
-      name: "工艺室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Craft Room",
     },
     {
-      name: "作坊",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Workshop",
     },
     {
-      name: "游戏室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Playroom",
     },
     {
-      name: "健身房",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Gym",
     },
     {
-      name: "酒窖",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Wine Cellar",
     },
     {
-      name: "作坊",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Garage",
     },
     {
-      name: "车库",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Attic Room",
     },
     {
-      name: "阁楼房",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Balcony",
     },
     {
-      name: "阳台",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Rooftop Terrace",
     },
     {
-      name: "屋顶露台",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Storage Room",
     },
     {
-      name: "储存室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
-    },
-    {
-      name: "食品储藏室",
-      img: "https://i.ibb.co/wB0P7BK/nordic-style.webp",
+      name: "Pantry",
     },
   ];
 
@@ -179,10 +142,10 @@ function StepType() {
       <div className="w-full  md:h-auto   ">
         <div className="h-full  md:pt-[10%]">
           <h3 className="hidden md:block text-[#271703] text-[48px] text-center font-semibold noto-sans ">
-            选择房型
+            Select room type
           </h3>
           <p className="hidden md:block text-[18px] text-[#9D5C0D] text-center noto-sans mb-[30px]">
-          选择或输入您想要的房间类型
+            Pick or type the room type you're envisioning
           </p>
 
           <div className="md:hidden mb-[16px] w-full px-1 flex gap-3 items-center py-[10px] bg-[#FEF7EF] justify-center">
@@ -190,10 +153,10 @@ function StepType() {
             <div className="">
               <h3 className=" text-[#271703] text-[16px] font-semibold noto-sans ">
                 {" "}
-                选择房型
+                Select room type
               </h3>
               <p className="  text-[12px] text-[#9D5C0D] noto-sans ">
-              选择或输入您想要的房间类型
+                Pick or type the room type you're envisioning
               </p>
             </div>
           </div>
@@ -220,8 +183,8 @@ function StepType() {
 
           <div className="mt-3  rounded-[20px] flex flex-col items-center md:items-start px-2 md:px-4  pt-6 pb-[64px] mx-4 md:mx-7  bg-[#F7F8F9]">
             <p className="mb-[12px] text-[14px] text-center px-4 md:text-left md:text-[16px] font-semibold text-[#76450A] ">
-            选择房间类型或打造您自己的房间类型！ 从选项中选择，或键入
-               在你独特的空间里。
+              Pick a Room Type or Craft Your Own! Choose from options, or type
+              in your unique space.
             </p>
 
             {/* .........  input field ........... */}
@@ -277,7 +240,7 @@ function StepType() {
               className="myBtn bg-[#9D5C0D] text-white flex rounded-[8px] py-2 md:py-3 px-[28px] items-center justify-center w-full  md:w-[192px] cursor-pointer"
             >
               <p className=" text-[20px] font-semibold noto-sans whitespace-nowrap">
-              下一个
+                Next
               </p>
               <Image className="" src={arrow} alt="" />
             </div>

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createContext, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { Inter } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 import Head from "next/head";
 
 export const MyContext = createContext();
@@ -76,9 +77,9 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <SessionProvider session={pageProps.session}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </MyContext.Provider>
   );
 }
-
-// test

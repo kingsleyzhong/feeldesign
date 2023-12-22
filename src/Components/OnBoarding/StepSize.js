@@ -26,10 +26,10 @@ function StepSize() {
     }
   };
   const sizes = [
-    "20平方尺以下",
-    "20 - 30 平方英尺",
-    "超过 30 英尺",
-    "另外一个选择"
+    "20坪以內",
+    "20 - 30 坪",
+    "30 - 40 坪",
+    "40坪以上"
   ];
   const handleInput = (selected) => {
     setSelectedOption(selected);
@@ -43,10 +43,10 @@ function StepSize() {
       <div className="w-full h-full md:h-auto">
       <div className=" h-full  md:h-full w-full  md:pt-[10%]  ">
         <h3 className="hidden md:block text-[#271703] text-[48px] text-center noto-sans font-semibold ">
-        选择房间大小
+        選擇室內空間大小
         </h3>
         <p className="hidden md:block text-[18px] text-[#9D5C0D] text-center mb-[60px] noto-sans">
-          请提供以平方英尺为单位的尺寸。
+          請提供以實坪為單位的尺寸。
         </p>
 
         <div className="md:hidden mb-[16px] w-full px-1 flex  gap-3 items-center py-[10px] bg-[#FEF7EF] justify-center">
@@ -54,10 +54,10 @@ function StepSize() {
           <div className="">
             <h3 className=" text-[#271703] text-[16px] font-semibold noto-sans ">
               {" "}
-              选择房间大小
+              選擇室內空間大小
             </h3>
             <p className="  text-[12px] text-[#9D5C0D] noto-sans ">
-              请提供以平方英尺为单位的尺寸。
+            請提供以實坪為單位的尺寸。
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ function StepSize() {
               alt=""
             />
             <p className="mb-[12px] text-[14px] md:text-[16px] font-semibold noto-sans text-[#76450A]">
-            选择一个空间！ 从选项中进行选择。
+            選擇一個目前房屋的大小
             </p>
           </div>
 
@@ -129,7 +129,7 @@ function StepSize() {
               className="myBtn bg-[#9D5C0D] text-white flex rounded py-[12px] md:py-3 px-4 md:px-[28px] items-center justify-center space-x-[12px] w-[192px] cursor-pointer"
             >
               <p className="text-[17px] md:text-[20px] font-semibold noto-sans">
-              下一个
+              下一步
               </p>
              <Image className="" src={arrow} alt="" />
             </div>
