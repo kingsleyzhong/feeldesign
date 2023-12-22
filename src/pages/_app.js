@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
 import Head from "next/head";
 import Script from "next/script";
+import { hotjar } from "react-hotjar";
 
 export const MyContext = createContext();
 export default function App({ Component, pageProps }) {
@@ -21,6 +22,10 @@ export default function App({ Component, pageProps }) {
     user,
     setUser,
   };
+
+  useEffect(() => {
+    hotjar.initialize(3803659, 6);
+  }, []);
 
   useEffect(() => {
     setOnBoardingStep(Number(localStorage.getItem("onBoardingStep")) || 0);
