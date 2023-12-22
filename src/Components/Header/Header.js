@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/logo.webp";
 import userIcon from "@/assets/images/onBoard/user-01.png";
-import downArrow from "@/assets/images/onBoard/downarrow.png";
+import downArrow from "@/assets/images/onBoard/downArrow.png";
 import { useRouter } from "next/router";
 import { MyContext } from "@/pages/_app";
 
